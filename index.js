@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 const client = axios.default
 
-app.all('/', async (req, res) => {
+app.all('/api/msg', async (req, res) => {
     const headers = req.headers
     const weixinAPI = `http://api.weixin.qq.com/cgi-bin/message/custom/send`
     const payload = {
